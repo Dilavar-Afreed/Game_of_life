@@ -1,12 +1,13 @@
-
+import random
 
 def grid_size(rows,col):
     board=[]
     for i in range(rows):
         board.append([])
         for j in range(col):
-            board[i].append(None)
+            board[i].append(random.randint(0, 1))
     return board
+
 
 def display_grid(a):
     strng=""
@@ -17,6 +18,6 @@ def display_grid(a):
     return strng
 
 
-    
-    
+print(grid_size(3,3))
+
     
