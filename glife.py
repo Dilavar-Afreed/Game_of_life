@@ -10,4 +10,4 @@ def display_grid(a):
     
     
     
-print(display_grid([[1,2,3],[1,2,3],[1,2,3]]))
+# print(display_grid([[1,2,3],[1,2,3],[1,2,3]]))
