@@ -42,10 +42,9 @@ def test_update_board_alive():
     assert glife.update_board(board) == [[1, 0, 1], [0, 0, 0], [1, 0, 1]]
 
 
-# def test_update():
-#     grid=[[1,1,0],[1,0,0],[0,1,0]]
-#     expected_output="1 1 0/n1 0 0/n1 0 0"
-#     assert glife.update_grid(grid) == expected_output
+def test_board_update():
+    grid=[[1,1,0],[1,0,0],[0,1,0]]
+    expected_output=[[1,1,0],[1,0,0],[0,0,0]]
+    assert glife.update_board(grid) == expected_output
 
-# def test_random_input():
 
