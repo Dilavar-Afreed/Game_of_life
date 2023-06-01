@@ -36,6 +36,33 @@ def get_neighbours(grid, row, col):
     return live_neighbor_count
 
 
+def update_board(board):
+    rows = len(board)
+    cols = len(board[0])
+    updated_board = grid_size(rows, cols)
+    for i in range(rows):
+        for j in range(cols):
+            live_neighbors =get_neighbours(board, i, j)
+            if board[i][j] == 1:
+                if live_neighbors < 2 or live_neighbors > 3:
+                    updated_board[i][j] = 0
+                else:
+                    updated_board[i][j] = 1
+            else:
+                if live_neighbors == 3:
+                    updated_board[i][j] = 1
+                else:
+                    updated_board[i][j] = 0
+    return updated_board
+
+
+
+
+
+
+
+
+
 
 
 # if __name__=="__main__":
