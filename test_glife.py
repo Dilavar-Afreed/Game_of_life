@@ -2,6 +2,8 @@ import glife
 
 
 
+
+
 def test_grid_size():
     board = glife.grid_size(3, 3)
     assert len(board) ==3
@@ -30,8 +32,10 @@ def test_get_neighbours():
     assert glife.get_neighbours(board, 2, 0) == 2
     assert glife.get_neighbours( board,2, 1) == 3
     assert glife.get_neighbours(board, 2, 2) == 1
-    
 
+
+def test_update_board_all_dead():
+    assert glife.update_board([[0, 0, 0], [0, 0, 0], [0, 0, 0]]) == [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
     
 
 
