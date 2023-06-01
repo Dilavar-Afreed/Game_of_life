@@ -25,16 +25,15 @@ def display_grid(a):
 
 
  
-def get_neighbours(row, col):
-    board=grid_size(row,col)
-    count = 0
+def get_neighbours(grid, row, col):
+    live_neighbor_count = 0
     for i in range(row-1, row+2):
         for j in range(col-1, col+2):
-            if (i == row and j == col) or i < 0 or j < 0 or i >= len(board) or j >= len(board[0]):
+            if (i == row and j == col) or i < 0 or j < 0 or i >= len(grid) or j >= len(grid[0]):
                 continue
-            if board[i][j] == 1:
-                count += 1
-    return count
+            if grid[i][j] == 1:
+                live_neighbor_count += 1
+    return live_neighbor_count
 
 
 

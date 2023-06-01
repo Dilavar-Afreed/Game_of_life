@@ -28,7 +28,7 @@ def test_get_neighbours():
     assert glife.get_neighbours(board, 1, 1) == 3
     assert glife.get_neighbours(board, 1, 2) == 3
     assert glife.get_neighbours(board, 2, 0) == 2
-    assert glife.get_neighbours(board, 2, 1) == 3
+    assert glife.get_neighbours( board,2, 1) == 3
     assert glife.get_neighbours(board, 2, 2) == 1
     
 
