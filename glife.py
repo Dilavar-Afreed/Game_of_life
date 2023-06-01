@@ -17,11 +17,26 @@ def display_grid(a):
         strng+='\n'
     return strng
 
-if __name__=="__main__":
-    row=3
-    col=3
-    board=grid_size(row,col)
-    print(display_grid(board))
+
+
+
+    
+
+
+
+ 
+
+
+
+
+
+# if __name__=="__main__":
+#     row=3
+#     col=3
+#     board=grid_size(row,col)
+#     # print(display_grid(board))
+#     print(board)
+
 
  
 
