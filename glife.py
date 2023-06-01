@@ -1,4 +1,6 @@
 import random
+import time
+
 
 def grid_size(rows,col):
     board=[]
@@ -16,13 +18,6 @@ def display_grid(a):
             strng+=f'{j} '
         strng+='\n'
     return strng
-
-
-
-
-    
-
-
 
  
 def get_neighbours(grid, row, col):
@@ -56,23 +51,15 @@ def update_board(board):
     return updated_board
 
 
-
-
-
-
-
-
-
-
-
-# if __name__=="__main__":
-#     row=3
-#     col=3
-#     board=grid_size(row,col)
-#     # print(display_grid(board))
-#     print(board)
-
+if __name__ == "__main__":
+    rows = 8
+    cols = 8
+    board = grid_size(rows, cols)
+    print(display_grid(board))
+    
+    while True:
+        board = update_board(board)
+        print(display_grid(board))
+        time.sleep(0.8)
 
  
-
-    
