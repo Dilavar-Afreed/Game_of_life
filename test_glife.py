@@ -34,10 +34,12 @@ def test_get_neighbours():
     assert glife.get_neighbours(board, 2, 2) == 1
 
 
-def test_update_board_all_dead():
+def test_update_board_dead():
     assert glife.update_board([[0, 0, 0], [0, 0, 0], [0, 0, 0]]) == [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
     
-
+def test_update_board_alive():
+    board = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+    assert glife.update_board(board) == [[1, 0, 1], [0, 0, 0], [1, 0, 1]]
 
 
 # def test_update():
